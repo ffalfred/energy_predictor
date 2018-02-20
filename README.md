@@ -10,13 +10,13 @@ Transforms FASTA sequences to sequences of matrices of 20X1. These are introduce
 ## Options of use
 Options of prediction-energies.py:
 
-### -in: 
+#### -in: 
 fasta file containing the protein sequences. Example: try.fasta
 
-### -p: 
+#### -p: 
 dictionary file containing the preprocessing values and weights for the neural network. It has to be "weights_neuralnetwork"
 
-### -o: 
+#### -o: 
 name of the output file. It will be placed in predicted_proteins. The output file is in format '.npz'. It contains the arrays:
 	
 	->"id": id of the protein
@@ -25,8 +25,12 @@ name of the output file. It will be placed in predicted_proteins. The output fil
 	->"mask_seq": mask sequence used for the neural network (nº of sequences x max length of protein x 1).  
 	->"predicted": vector of the energies (nº of sequences x max length of protein x 5). In mask format.
 
-### -s: 
+#### -s: 
 name of the output file with proteins that has not been processed due to the length or because it has certain amino-acids
+
+### Example of usage:
+
+$python3 prediction-energies.py -in try.fasta -p weights_neuralnetwork -o try
 
 ## Files
 Files contained in the "energy_predictor" repository:
