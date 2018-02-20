@@ -27,6 +27,45 @@ Files contained in the "energy_predictor" repository:
 	-> Fasta file to try the program 
 ### weights_neuralnetwork.pkl
 	-> Weights and preprocessing/postprocessing values for the neural network
+	
+## Packages and recommendations
+
+Packages required (version):
+
+	-> numpy: (1.13.1)
+
+	-> theano: (0.9.0)
+	
+	-> lasagne (0.2.dev1)
+	
+	-> time
+	
+	-> _pickle
+	
+	-> Bio (1.70)
+	
+	-> argparse (1.1)
+	
+	-> random
+	
+	-> os
+	
+	-> math
+	
+	-> importlib
+
+Notice that, as it uses THEANO, the /.theanorc file must contain:
+
+	[lib]
+	cnmem=.75
+
+	[global]
+	floatX = float32
+	device = cuda
+
+Or add before "python3":
+
+	THEANO_FLAGS='floatX=float32,device=cuda,lib.cnmem=.75'
 
 ## Author 
 Alfred Ferrer Florensa, KU Bioinformatics
