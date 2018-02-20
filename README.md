@@ -21,8 +21,8 @@ Files contained in the "energy_predictor" repository:
 ### dropout_seq.py
 	-> File that contains the code for the sequential dropout
 ### predicted_proteins 
-	-> Folder that will contain the output of the prediction-energies.py. It also contains a folder with the strange proteins that
-	have not been able to process.
+	-> Folder that will contain the output of the prediction-energies.py. It also contains a folder with the strange
+	proteins that have not been able to process.
 ### try.fasta   
 	-> Fasta file to try the program 
 ### weights_neuralnetwork.pkl
