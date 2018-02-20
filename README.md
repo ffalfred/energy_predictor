@@ -7,6 +7,27 @@ Program done during the Master's thesis: " Predicting the energy content of prot
 
 Transforms FASTA sequences to sequences of matrices of 20X1. These are introduced in a bidirectional GRU neural network complemented with two previous feed-forward layers and three posterior feed-forward layers.
 
+## Options of use
+Options of prediction-energies.py:
+
+### -in: 
+fasta file containing the protein sequences. Example: try.fasta
+
+### -p: 
+dictionary file containing the preprocessing values and weights for the neural network. It has to be "weights_neuralnetwork"
+
+### -o: 
+name of the output file. It will be placed in predicted_proteins. The output file is in format '.npz'. It contains the arrays:
+	
+	->"id": id of the protein
+	->"aminoacid": sequence of amino-acids of the proteins
+	->"x": sequence of amino-acid in the binary array form (nº of sequences x max length of protein x 20). In mask format.
+	->"mask_seq": mask sequence used for the neural network (nº of sequences x max length of protein x 1).  
+	->"predicted": vector of the energies (nº of sequences x max length of protein x 5). In mask format.
+
+### -s: 
+name of the output file with proteins that has not been processed due to the length or because it has certain amino-acids
+
 ## Files
 Files contained in the "energy_predictor" repository:
 
